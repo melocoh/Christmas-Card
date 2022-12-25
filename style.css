@@ -6,8 +6,8 @@ body {
 
 /* card */
 .card {
-    width: 300px;
-    height: 430px;
+    width: 50vh;
+    height: 72vh;
     margin: 0 auto;
     position: relative;
     perspective: 1400px;
@@ -39,7 +39,8 @@ body {
 }
 
 .left-page img {
-    width: 100%;
+    max-width:100%;
+    height: auto;
 }
 
 .left-page .left-back {
@@ -62,7 +63,7 @@ body {
     height: 100%;
     background: #fff;
     text-align: center;
-    padding: 30px;
+    padding: 60px;
     box-sizing: border-box;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
     color: #444;
@@ -74,4 +75,37 @@ body {
 
 .right-page h2 {
     color: #3972b7;
+}
+
+@media all and (max-width:480px) {
+
+    .card {
+        width: 25vh;
+        height: 36vh;
+        margin: 0 auto;
+        position: relative;
+        perspective: 1400px;
+        left: 0;
+        transition: all 1s;
+    }
+
+    .card.open {
+        left: 70px;
+    }
+
+    /* right card */
+    .right-page {
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        text-align: center;
+        padding: 5px;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        color: #444;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
 }
